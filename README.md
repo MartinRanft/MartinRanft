@@ -1,94 +1,95 @@
-<!-- Header Animation: Typing Effect -->
-<div align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=30&duration=3000&pause=1000&color=44C997&center=true&vCenter=true&width=600&lines=public+class+MartinRanft;%7B+...;%7D;Console.WriteLine(%22Hello+World!%22)%3B;Building+Scalable+Backends...;Lover+of+.NET+and+Docker..." alt="Typing SVG" />
-  </a>
-</div>
+# Martin Ranft
 
-<!-- Space -->
-<br />
+**.NET Backend Developer** · Germany
 
-```csharp
-// 📂 Solution: MartinRanft.Profile
-// └── 📄 Program.cs
-
-using System;
-using Modern.Technologies;
-
-namespace MartinRanft.Profile
-{
-    /// <summary>
-    /// .NET Developer with a passion for clean architecture and DevOps.
-    /// Blending life experience with modern tech stacks.
-    /// </summary>
-    public class Developer
-    {
-        public string Name => "Martin Ranft";
-        public string Role => "Backend Specialist";
-        public string Location => "Germany";
-
-        public string[] CoreSkills => new [] 
-        { 
-            ".NET 8 / C#", 
-            "Docker & Containers", 
-            "CI/CD Automation (GitLab)", 
-            "RESTful APIs" 
-        };
-
-        public void DailyGoal()
-        {
-            // Always looking for the next challenge to solve.
-            Console.WriteLine("Write Clean Code. Automate Everything.");
-        }
-    }
-}
-```
+I build reliable backend systems, APIs, and automation tools with C# and .NET.  
+My focus is on clean architecture, infrastructure automation, and pragmatic solutions for real-world problems — from Docker management platforms to EU regulatory compliance tooling.
 
 ---
 
-### 🛠️ tech_stack.json
+### Tech Stack
 
-| **Languages** | **Frameworks** | **DevOps & Tools** | **Database** |
-| :---: | :---: | :---: | :---: |
-| ![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white) | ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white) | ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) | ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) |
-| | ![ASP.NET](https://img.shields.io/badge/ASP.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white) | ![GitLab CI](https://img.shields.io/badge/gitlab-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) | ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) |
+**Languages & Frameworks**  
+C# · .NET 8–10 · ASP.NET Core · Blazor Server · Avalonia UI · Entity Framework Core
 
----
+**Cloud & Auth**  
+Azure AD · JWT · Microsoft Graph API · ASP.NET Identity · OAuth
 
-### 📦 release_builds (Projects)
+**Infrastructure & DevOps**  
+Docker · Multi-Stage Builds · GitLab CI/CD · Linux (Arch) · Nginx · WireGuard
 
-> **Selected repositories demonstrating modern architecture:**
+**Data**  
+MySQL · MariaDB · SQL Server · SQLite · Stored Procedures · XML/XSD Serialization
 
-#### 1. 🏗️ APIExample (Backend Template)
-`Status: Production Ready`
-* Summary: A robust starter template for enterprise-grade APIs.
-* Code Specs: `.NET 8`, `Clean Architecture`, `Background Services`.
-* DevOps: Includes a full GitLab CI/CD pipeline.
-
-#### 2. 🤖 KaffeBot (Discord Service)
-`Status: Active`
-* Summary: Interactive bot service utilizing microservice patterns.
-* Code Specs: `.NET 8`, `Dependency Injection`, `Async/Await`.
-* Deployment: Fully dockerized.
+**Integration**  
+REST API Design · Swagger/OpenAPI · SMTP · FTP · Docker Engine API
 
 ---
 
-### 📊 performance_metrics
+### Projects
 
-<div align="center">
-  <a href="https://github.com/MartinRanft">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=MartinRanft&show_icons=true&theme=dracula&include_all_commits=true&count_private=true&hide_border=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=MartinRanft&layout=compact&theme=dracula&hide_border=true"/>
-  </a>
-</div>
+#### [TibiaHuntMaster](https://github.com/MartinRanft/TibiaHuntMaster)
+Cross-platform desktop application for tracking and optimizing game sessions in Tibia.  
+Built with **Avalonia UI** targeting Windows and Linux from a single codebase.
+
+- Real-time session tracking with profit/loss analysis and loot calculations
+- MVVM architecture with reactive UI bindings
+- Cross-platform build pipeline
+
+`C#` `Avalonia UI` `.NET 10` `MVVM` `Cross-Platform`
+
+#### [DockerControl](https://github.com/MartinRanft/DockerControl) *(archived)*
+Self-hosted web application for managing Docker containers, images, volumes, and networks through a browser UI. Built as an internal tool to replace CLI-based Docker management.
+
+- Blazor Server frontend with Radzen components and real-time container status updates
+- Direct Docker Engine API integration via Unix sockets (Linux) and TCP (Windows)
+- Full auth system with ASP.NET Identity, role-based access control, and 2FA
+- Docker Compose project management with YAML parsing and editing
+- Private Docker Registry integration
+- Multi-stage Dockerfile with embedded Python runtime for scripting support
+
+`C#` `Blazor Server` `.NET 9` `Docker API` `EF Core` `SQLite` `ASP.NET Identity`
+
+#### [APIExample](https://github.com/MartinRanft/APIExample)
+Production-ready API template implementing clean architecture patterns.  
+Designed as a reusable foundation for backend services.
+
+- Layered architecture with clear separation of concerns
+- Background service integration for async task processing
+- Full CI/CD pipeline with GitLab
+
+`C#` `ASP.NET Core` `.NET 8` `Docker` `GitLab CI`
+
+#### [KaffeBot](https://github.com/MartinRanft/KaffeBot)
+Discord bot service built with modern .NET patterns.  
+Runs as a fully containerized service with automated deployments.
+
+- Async command handling with dependency injection
+- Backed by a dedicated REST API for data and configuration
+- Dockerized with CI/CD-driven image builds and registry push
+
+`C#` `.NET 8` `Docker` `REST API` `GitLab CI`
 
 ---
 
-### 📞 contact_info
+### Professional Experience
 
-```ini
-[Contact]
-Email = "DEINE-EMAIL-HIER-EINFÜGEN"
-LinkedIn = "DEIN-LINKEDIN-LINK-ODER-LÖSCHEN"
-Status = "Open_for_Opportunities"
-```
+Beyond personal projects, I have built internal business tools in professional settings, including:
+
+- **Enterprise statistics platform** — REST API aggregating email and telephony data via Microsoft Graph API and Starface PBX, secured with Azure AD and JWT
+- **EU Intrastat automation** — Console application generating XML declarations against official INSTAT XSD schemas, with data validation, SQL Server integration, and automated SMTP delivery
+- **Multi-environment CI/CD pipelines** — GitLab CI configurations with branch-based tagging strategies (dev/prod/feature/tag), Docker registry integration, and multi-stage builds
+
+---
+
+### GitHub Stats
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MartinRanft&show_icons=true&theme=default&include_all_commits=true&count_private=true&hide_border=true&hide_title=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MartinRanft&layout=compact&theme=default&hide_border=true&hide_title=true)
+
+---
+
+### Contact
+
+📧 **Email** — [martin.ranft@tibiafun.eu](mailto:martin.ranft@tibiafun.eu)  
+💼 **LinkedIn** — [linkedin.com/in/martin-ranft-57270121b](https://www.linkedin.com/in/martin-ranft-57270121b/)
