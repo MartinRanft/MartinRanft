@@ -82,13 +82,6 @@ Beyond personal projects, I have built internal business tools in professional s
 
 ---
 
-### GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MartinRanft&show_icons=true&theme=default&include_all_commits=true&count_private=true&hide_border=true&hide_title=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MartinRanft&layout=compact&theme=default&hide_border=true&hide_title=true)
-
----
-
 ### Contact
 
 📧 **Email** — [martin.ranft@tibiafun.eu](mailto:martin.ranft@tibiafun.eu)  
