@@ -13,30 +13,43 @@ My focus is on clean architecture, infrastructure automation, and pragmatic solu
 C# · .NET 8–10 · ASP.NET Core · Blazor Server · Avalonia UI · Entity Framework Core
 
 **Cloud & Auth**  
-Azure AD · JWT · Microsoft Graph API · ASP.NET Identity · OAuth
+Azure AD · JWT · Microsoft Graph API · ASP.NET Identity · OAuth · PBKDF2-SHA256
 
 **Infrastructure & DevOps**  
-Docker · Multi-Stage Builds · GitLab CI/CD · Linux (Arch) · Nginx · WireGuard
+Docker · Multi-Stage Builds · GitHub Actions · GitLab CI/CD · Linux (Arch) · Nginx · WireGuard
 
-**Data**  
-MySQL · MariaDB · SQL Server · SQLite · Stored Procedures · XML/XSD Serialization
+**Data & Caching**  
+MySQL · MariaDB · SQL Server · SQLite · Redis · HybridCache · Stored Procedures · XML/XSD Serialization
 
 **Integration**  
-REST API Design · Swagger/OpenAPI · SMTP · FTP · Docker Engine API
+REST API Design · Swagger/OpenAPI · Scalar UI · Prometheus Metrics · SMTP · FTP · Docker Engine API
 
 ---
 
 ### Projects
+
+#### [TibiaData](https://github.com/MartinRanft/tibiadata) · [Live Demo](https://tibiadata.bytewizards.de/)
+High-performance REST API providing structured Tibia game data, synced from TibiaWiki.  
+Replaces slow wiki page parsing with a fast, typed, cache-backed data layer.
+
+- 42+ endpoint categories (Items, Creatures, Hunting Places, NPCs, Spells, Quests, and more)
+- Multi-layer caching with HybridCache (L1 In-Memory + L2 Redis) and tag-based invalidation
+- Automated background scraping with change detection, error tracking, and admin controls
+- Security hardening: rate limiting (token bucket + concurrency), IP banning, brute force protection, PBKDF2-SHA256, security headers
+- Prometheus metrics endpoint and Kubernetes-ready health checks (`/health/live`, `/health/ready`)
+
+`C#` `ASP.NET Core` `.NET 10` `EF Core` `MariaDB` `Redis` `Docker` `Coravel` `Prometheus`
 
 #### [TibiaHuntMaster](https://github.com/MartinRanft/TibiaHuntMaster)
 Cross-platform desktop application for tracking and optimizing game sessions in Tibia.  
 Built with **Avalonia UI** targeting Windows and Linux from a single codebase.
 
 - Real-time session tracking with profit/loss analysis and loot calculations
-- MVVM architecture with reactive UI bindings
-- Cross-platform build pipeline
+- MVVM architecture with reactive UI bindings and 6-language localization
+- 32 test files covering unit, integration, and concurrency scenarios
+- Consumes data from TibiaData API, TibiaWiki, and TibiaPal
 
-`C#` `Avalonia UI` `.NET 10` `MVVM` `Cross-Platform`
+`C#` `Avalonia UI` `.NET 10` `EF Core` `SQLite` `MVVM` `Polly` `xUnit`
 
 #### [DockerControl](https://github.com/MartinRanft/DockerControl) *(archived)*
 Self-hosted web application for managing Docker containers, images, volumes, and networks through a browser UI. Built as an internal tool to replace CLI-based Docker management.
@@ -69,16 +82,6 @@ Runs as a fully containerized service with automated deployments.
 - Dockerized with CI/CD-driven image builds and registry push
 
 `C#` `.NET 8` `Docker` `REST API` `GitLab CI`
-
----
-
-### Professional Experience
-
-Beyond personal projects, I have built internal business tools in professional settings, including:
-
-- **Enterprise statistics platform** — REST API aggregating email and telephony data via Microsoft Graph API and Starface PBX, secured with Azure AD and JWT
-- **EU Intrastat automation** — Console application generating XML declarations against official INSTAT XSD schemas, with data validation, SQL Server integration, and automated SMTP delivery
-- **Multi-environment CI/CD pipelines** — GitLab CI configurations with branch-based tagging strategies (dev/prod/feature/tag), Docker registry integration, and multi-stage builds
 
 ---
 
